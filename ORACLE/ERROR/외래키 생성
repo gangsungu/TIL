@@ -1,0 +1,4 @@
+MySQL에서 외래키를 생성할 땐, on delete와 on update 모두 cascade가 가능하지만
+Oracle에서는 on delete만 가능하다.
+
+on update는 트리거를 생성하여 구현할 수 있다.
