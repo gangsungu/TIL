@@ -15,4 +15,6 @@ mapper.setVisiblity(PropertyAccessor.FILED, JsonAutoDetect.Visiblity.ANY);
 @JsonAutoDetect(fieldVisiblity = JsonAutoDetect.Visiblity.ANY)
 옵션에는 ANY 외에도 DEFAULT, NON_PRIVATE, NONE, PROTECTED_AND_PUBLIC, PUBLIC_ONLY 등이 있다.
 
-참고 : https://stackoverflow.com/questions/8367312/serializing-with-jackson-json-getting-no-serializer-found
+참고 : 
+https://stackoverflow.com/questions/8367312/serializing-with-jackson-json-getting-no-serializer-found
+https://www.baeldung.com/jackson-jsonmappingexception
