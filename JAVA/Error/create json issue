@@ -18,3 +18,10 @@ mapper.setVisiblity(PropertyAccessor.FILED, JsonAutoDetect.Visiblity.ANY);
 참고 : 
 https://stackoverflow.com/questions/8367312/serializing-with-jackson-json-getting-no-serializer-found
 https://www.baeldung.com/jackson-jsonmappingexception
+
+* Json 라이브러리로 org.codehaus.jackson을 사용하고 있는데, 해당 라이브러리는 퍼블릭 getter/setter가 아닌 
+private getter/setter여도 접근이 가능하다.
+
+다만, DB에서 데이터를 List로 받아온다고 가정할 때, 해당 List 그대로 json으로 변환해야 No serializer found error가 발생하지 않는다.
+받아온 List에서 다시 한번 데이터 가공을 거치려고 시도하면 No Serialize found error가 발생한다.
+이것 때문에 상당히 애먹었음..
