@@ -1,0 +1,23 @@
+java.lang.NumberFormatException: For input string: "Y"
+
+<if test="searchType != null and searchType != ''">
+  <choose>
+	  <when test="searchType == 'N'">
+			AND R.STATUS = 'N'
+		</when>
+		<otherwise>
+			AND R.STATUS = 'Y'
+		</otherwise>
+	</choose>
+</if>
+
+얼핏 보기에는 틀린 점이 없는 정상적인 코드다. 무엇이 문제일까
+MyBatis가 'N'이라는 문자열을 String으로 인식하지 않고 Char로 인식하기 때문이다.
+자바의 char 형은 실제로 문자의 코드값을 저장하기 때문이고 이것을 숫자로 인식하기에
+NumberFormatException이 발생하는 것이다.
+
+단, NN처럼 CharSequence의 경우는 정상적으로 String으로 인식하므로 에러가 발생하지 않는다.
+
+해결책은 해당 문자를 String으로 인식시키면 된다.
+1. <when test='searchType == "N"'>
+2. <when test="searchType == 'N'.toString()">
