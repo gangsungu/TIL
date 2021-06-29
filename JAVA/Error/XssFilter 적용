@@ -13,3 +13,6 @@
 ex)
 <Context allowCasualMultipartParsing="true" path="/">
 <Resources cachingAllowed="true" cacheMaxSize="100000" />
+
+ex)
+XssPreventer.escape()를 사용하여 강제 escape 처리도 가능하다
