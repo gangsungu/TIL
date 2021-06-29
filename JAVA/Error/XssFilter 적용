@@ -9,3 +9,7 @@
 1. form에 enctype이 선언되었는지 확인
 2. multipartResolver bean이 등록되었는지 확인
 3. tomcat의 context.xml에 multipartParsing이 등록되었는지 확인
+
+ex)
+<Context allowCasualMultipartParsing="true" path="/">
+<Resources cachingAllowed="true" cacheMaxSize="100000" />
