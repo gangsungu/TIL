@@ -1,0 +1,17 @@
+세션클래스는 자바메일 기본에 정의된 클래스이다. 
+이 세션을 통해서 많은 일을 할수 있는데, 
+해당 객체는 메일서버, 사용자 정보, 패스워드 등의 정보를 java.util.Properties클래스에 의해 얻어올 수가 있다.
+
+Properties클래스의 내용과 사용법은 자바기본의 Property사용법에 대하여 참조하라.
+클래스의 생성자는 private형태로 되어있으며(즉 singlton pattern이란 이야기겠죠?) 
+하나의 기본세션을 getDefaultInstance()메소드에 의하여 공유할수 있게된다.
+
+세션을 얻어내는 예를 들어보면 
+Properties props = new Properties();
+Session session = Session.getDefaultInstance(props, null);
+
+처럼 사용할수도 있으며, 하나의 유일한 세션을 생성한다면 getInstance()메소드를 사용할수도 있을것이다.
+
+Properties props = new Properties();
+// fill props with any information
+Session session = Session.getInstance(props, null);
