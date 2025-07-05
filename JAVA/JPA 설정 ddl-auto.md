@@ -1,3 +1,5 @@
+# JPA DDL 설정
+
 H2 인메모리 DB를 사용하다가 Docker에 MySQL을 설치하여 연동하였다
 프로젝트를 실행할 때마다 테이블을 생성하려 하기에 살펴보니
 
@@ -9,4 +11,4 @@ H2 인메모리 DB를 사용하다가 Docker에 MySQL을 설치하여 연동하�
 | `none`        | Hibernate가 **DDL 생성 작업을 하지 않음**     |
 | `validate`    | 테이블 구조와 엔티티가 맞는지만 검증, **생성은 안 함**   |
 
-create-drop으로 설젇되어 있던 것을 update로 수정하여 해결
+create-drop으로 설정되어 있던 것을 update로 수정하여 해결
