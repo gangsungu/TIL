@@ -1,6 +1,6 @@
 # QueryDSL의 의존성은 어디에 추가해야 하는가
 
-module-api과 module-domain 중 QueryDSL의 의존성은 어디에 추가되어야 하는가
+module-api과 module-domain 중 QueryDSL의 의존성은 어디에 추가되어야 하는가  
 얼핏보면 module-api가 맞는 것 같지만 아니다
 
 `QueryDSL의 의존성은 module-domain이 맞다`
